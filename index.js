@@ -102,14 +102,14 @@ client.on("messageCreate", async (message) => {
 
   const embed = new EmbedBuilder()
     .setColor(THEME_COLOR)
-    .setTitle(`🎫 Support ${SERVER_NAME}`)
+    .setTitle(`## 🎫 Support ${SERVER_NAME}`)
     .setDescription(
       "🎫 **Système de Tickets – ATLAS RP**\n\n" +
-      "Bienvenue sur le système de tickets officiel d’ATLAS RP.\n" +
-      "Ce système te permet de contacter le staff pour toute demande ou problème.\n\n" +
+      "- Bienvenue sur le système de tickets officiel d’ATLAS RP.\n" +
+      "> Ce système te permet de contacter le staff pour toute demande ou problème.\n\n" +
       "🧭 **Choisis la catégorie adaptée à ta situation :**\n\n" +
       "🕐 **Important :** Merci d’être clair et respectueux dans ton message.\n" +
-      "Le staff te répondra dès que possible selon la priorité de ta demande."
+      "Les staff te répondrons dès que possible selon la priorité de ta demande."
     );
 
   await message.channel.send({
