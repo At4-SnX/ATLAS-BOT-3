@@ -49,7 +49,7 @@ const CATEGORY_LABELS_FR = {
 
 module.exports = {
   TOKEN: readVar("DISCORD_TOKEN", { required: true }),
-  THEME_COLOR = Number(readVar("THEME_COLOR", { fallback: "#00eeff" }).trim().replace("#", "0x"));
+  THEME_COLOR: readVar("THEME_COLOR", { fallback: "#00eeff" }),
   STAFF_ROLE,
   LOG_CHANNEL: readVar("LOG_CHANNEL_ID", { required: true }),
   PING_ROLES,
