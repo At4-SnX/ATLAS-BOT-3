@@ -56,10 +56,15 @@ const client = new Client({
   partials: [Partials.Channel, Partials.Message, Partials.GuildMember, Partials.User],
 });
 
+const { ActivityType } = require("discord.js");
+
 client.once("clientReady", () => {
   console.log(`✅ ATLAS TICKET connecté en tant que ${client.user.tag}`);
 
-  client.user.setActivity("discord.gg/atlasrpfr", { type: 3 }); // 3 = Regarde
+  client.user.setActivity("discord.gg/atlasrpfr", {
+    type: ActivityType.Streaming,
+    url: "https://www.twitch.tv/atlasrp_officiel" // Obligatoire pour le point violet
+  });
 
   const missing = Object.entries(CATEGORY_IDS).filter(([, id]) => !id);
   if (missing.length > 0) {
